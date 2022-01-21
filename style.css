@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  background-color: #e0e8ff;
+}
+
+.root {
+  background-color: #e0e8ff;
+  background-image: url("./images/pattern-background-mobile.svg");
+  background-repeat: no-repeat;
+  font-family: "Red Hat Display", sans-serif;
+  max-width: 375px;
+  height: 667px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1440px) {
+  .root {
+    background-image: url("./images/pattern-background-desktop.svg");
+    max-width: 1440px;
+    height: 1000px;
+    margin: 0 auto;
+  }
+}
+
+.container {
+  height: 567px;
+  width: 327px;
+  border-radius: 20px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #FFFFFF;
+  filter: drop-shadow(0px 40px 40px #CCD7F9);
+}
+@media screen and (min-width: 1440px) {
+  .container {
+    height: 697px;
+    width: 450px;
+  }
+}
+
+.head-container {
+  height: 160px;
+  width: 327px;
+  border-radius: 20px 20px 0 0;
+}
+@media screen and (min-width: 1440px) {
+  .head-container {
+    height: 220px;
+    width: 450px;
+  }
+}
+
+.body-container h1 {
+  color: #1f2f56;
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 29px;
+  text-align: center;
+  margin-top: 32px;
+}
+@media screen and (min-width: 1440px) {
+  .body-container h1 {
+    font-size: 28px;
+    line-height: 37px;
+  }
+}
+.body-container p {
+  color: #7280a7;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: center;
+  margin: 12px 32px 0 32px;
+}
+@media screen and (min-width: 1440px) {
+  .body-container p {
+    font-size: 16px;
+    line-height: 26px;
+    margin: 17px 48px 0 48px;
+  }
+}
+.body-container .price {
+  background-color: #f5f7ff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 17px 16px;
+  margin: 24px;
+  border-radius: 12px;
+}
+.body-container .price .plan-price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.body-container .price .plan-price img {
+  height: 48px;
+  width: 48px;
+  margin-right: 20px;
+}
+.body-container .price .plan-price h2 {
+  color: #1f2f56;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 19px;
+}
+.body-container .price .plan-price p {
+  color: #7280a7;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  margin: 3px 0 0 0;
+}
+.body-container .price a {
+  color: #382AE1;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 17px;
+  text-decoration-line: underline;
+  margin-left: 40px;
+}
+.body-container .price a:hover {
+  color: #766CF1;
+  text-decoration-line: none;
+}
+@media screen and (min-width: 1440px) {
+  .body-container .price {
+    font-size: 16px;
+    line-height: 26px;
+    margin: 20px 48px 32px 48px;
+    padding: 25px;
+  }
+  .body-container .price .plan-price p {
+    margin-top: 6px;
+  }
+  .body-container .price a {
+    margin-left: 90px;
+  }
+}
+.body-container .btn-1 {
+  font-family: "Red Hat Display", sans-serif;
+  width: 279px;
+  height: 50px;
+  border-radius: 11px;
+  border: none;
+  color: #FFFFFF;
+  background-color: #382AE1;
+  margin: 0 24px 24px 24px;
+  font-weight: 900;
+  font-size: 15px;
+  line-height: 20px;
+  box-shadow: 0px 20px 20px #E2E5F7;
+}
+.body-container .btn-1:hover {
+  background-color: #766CF1;
+  box-shadow: 0px 20px 20px rgba(56, 42, 225, 0.190291);
+  cursor: pointer;
+}
+@media screen and (min-width: 1440px) {
+  .body-container .btn-1 {
+    margin: 0 48px 32px 48px;
+    width: 354px;
+  }
+}
+.body-container .btn-2 {
+  font-family: "Red Hat Display", sans-serif;
+  color: #717FA6;
+  border: none;
+  margin: 0 115px;
+  font-weight: 900;
+  font-size: 15px;
+  line-height: 20px;
+}
+.body-container .btn-2:hover {
+  cursor: pointer;
+  color: #1f2f56;
+}
+@media screen and (min-width: 1440px) {
+  .body-container .btn-2 {
+    margin: 0 177px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

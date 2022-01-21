@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+$breakpoints: (
+  "phone": 375px,
+  "desktop": 1440px
+);
+
+@mixin media-min($_key){
+  @media screen and (min-width: map-get($breakpoints, $_key)) {
+    &{ @content; }
+  }
+}
+
+
+$base-color-1: hsl(225, 100%, 94%);
+$base-color-2: hsl(245, 75%, 52%);
+$neutral-color-1: hsl(225, 100%, 98%);
+$neutral-color-2: hsl(224, 23%, 55%);
+$neutral-color-3: hsl(223, 47%, 23%);
+
+$font: 'Red Hat Display', sans-serif;
+$font-medium: 500;
+$font-bold: 700;
+$font-black: 900;
+
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body{
+ background-color: $base-color-1;
+}
+
+.root{
+  background-color: $base-color-1;
+  background-image: url('./images/pattern-background-mobile.svg');
+  background-repeat: no-repeat;
+  font-family: $font;
+  max-width: 375px;
+  height: 667px;
+  margin: 0 auto;
+  
+  @include media-min("desktop") {
+    background-image: url('./images/pattern-background-desktop.svg');
+    max-width: 1440px;
+    height: 1000px;
+    margin: 0 auto;
+  }
+}
+
+.container{
+  height: 567px;
+  width: 327px;
+  border-radius: 20px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #FFFFFF;
+  filter: drop-shadow(0px 40px 40px #CCD7F9);
+
+  @include media-min("desktop") {
+    height: 697px;
+    width: 450px;
+  }
+}
+
+
+.head-container{
+    height: 160px;
+    width: 327px;
+    border-radius: 20px 20px 0 0;
+
+    @include media-min("desktop") {
+      height: 220px;
+      width: 450px;
+    }
+  }  
+
+.body-container{
+  h1{
+    color: $neutral-color-3;
+    font-weight: $font-black;
+    font-size: 22px;
+    line-height: 29px;
+    text-align: center;
+    margin-top: 32px;
+
+    @include media-min("desktop") {
+      font-size: 28px;
+      line-height: 37px;
+    }
+  }
+  p{
+    color: $neutral-color-2;
+    font-weight: $font-medium;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+    margin: 12px 32px 0 32px;
+    @include media-min("desktop") {
+      font-size: 16px;
+      line-height: 26px;
+      margin: 17px 48px 0 48px;
+    }
+  }
+  .price{
+    background-color: $neutral-color-1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 17px 16px;
+    margin: 24px;
+    border-radius: 12px;
+    .plan-price{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      img{
+        height: 48px;
+        width: 48px;
+        margin-right: 20px;
+      }
+      h2{
+        color: $neutral-color-3;
+        font-weight: $font-black;
+        font-size: 14px;
+        line-height: 19px;  
+      }
+      p{
+        color: $neutral-color-2;
+        font-weight: $font-medium;
+        font-size: 14px;
+        line-height: 19px;
+        margin: 3px 0 0 0;
+      }
+    }
+    a{
+      color: #382AE1;
+      font-weight: $font-bold;
+      font-size: 13px;
+      line-height: 17px;
+      text-decoration-line: underline;
+      margin-left: 40px;
+      &:hover{
+        color: #766CF1;
+        text-decoration-line: none;
+      }
+    }
+    @include media-min("desktop") {
+      font-size: 16px;
+      line-height: 26px;
+      margin: 20px 48px 32px 48px;
+      padding: 25px;
+      .plan-price{
+        p{
+          margin-top: 6px;
+        }
+      }
+      a{
+        margin-left: 90px;
+      }
+    }
+  }
+  .btn-1{
+    font-family: $font;
+    width: 279px;
+    height: 50px;
+    border-radius: 11px;
+    border: none;
+    color: #FFFFFF;
+    background-color: #382AE1;
+    margin: 0 24px 24px 24px;
+    font-weight: $font-black;
+    font-size: 15px;
+    line-height: 20px;
+    box-shadow: 0px 20px 20px #E2E5F7;
+    &:hover {
+      background-color: #766CF1;
+      box-shadow: 0px 20px 20px rgba(56, 42, 225, 0.190291);
+      cursor: pointer;
+    }
+
+    @include media-min("desktop") {
+      margin: 0 48px 32px 48px;
+      width: 354px;
+    }
+
+  }
+  .btn-2{
+    font-family: $font;
+    color: #717FA6;
+    border: none;
+    margin: 0 115px;
+    font-weight: $font-black;
+    font-size: 15px;
+    line-height: 20px;
+    &:hover {
+      cursor: pointer;
+      color: $neutral-color-3;
+    }
+
+    @include media-min("desktop") {
+      
+    margin: 0 177px;
+    }
+  }
+}
+
+
+
